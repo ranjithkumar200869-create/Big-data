@@ -154,3 +154,85 @@ Add log compression
 Encrypt binary log files
 Integrate with Apache Kafka
 Add data visualization and analytics
+
+
+
+# Amazon Product Analysis using RDD
+
+## Project Overview
+This project demonstrates a simple data processing pipeline using a custom RDD (Resilient Distributed Dataset) implementation. The program reads an Amazon product dataset, filters electronic products with ratings greater than 4, extracts their names, and displays the results.
+
+## Features
+- Load Amazon product dataset from a CSV file.
+- Create an RDD object.
+- Filter products belonging to the Electronics category.
+- Filter products with ratings greater than 4.
+- Extract product names using the map operation.
+- Display the filtered product names.
+
+## Project Structure
+
+```
+Project/
+│── main.py
+│── Data/
+│   └── amazon.csv
+│── src/
+│   ├── loader.py
+│   ├── rdd.py
+│   └── utils.py
+```
+
+## Requirements
+- Python 3.x
+
+No external libraries are required if the custom `src` modules are included.
+
+## How to Run
+
+1. Place the dataset inside the `Data` folder.
+2. Open a terminal in the project directory.
+3. Run the program:
+
+```bash
+python main.py
+```
+
+## Workflow
+
+1. Load the Amazon dataset.
+2. Create an RDD from the dataset.
+3. Filter products whose category contains **Electronics**.
+4. Filter products with **rating > 4**.
+5. Extract the product names.
+6. Display the final result.
+
+## Example Output
+
+```
+===== RESULTS =====
+Apple iPhone 14
+Samsung Galaxy S23
+Sony Headphones
+Boat Bluetooth Speaker
+...
+```
+
+## Technologies Used
+
+- Python
+- CSV File Handling
+- Custom RDD Operations
+- Functional Programming (Filter, Map, Collect)
+
+## Future Enhancements
+
+- Sort products by rating.
+- Find top-rated products.
+- Filter by price range.
+- Export results to CSV.
+- Add Reduce and GroupBy operations.
+
+## Author
+
+Ranjith Kumar B
